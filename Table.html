@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <a href="C:\Users\daret\OneDrive\Рабочий стол\html\сайт\secondFile.html">Вторая страница</a> <br>
+        <a href="C:\Users\daret\OneDrive\Рабочий стол\html\сайт\firstSite.html">Первая страница</a>
+        <hr>
+        <details>
+          <summary>Настройки</summary>
+          <table>
+              <tr>
+                  <td>
+                      <form>
+                            <strong>Значение по оси OX</strong><br>
+                            
+                            <input type="radio" name="ox" value="Сборная">Страна<br>
+                            <input type="radio" name="ox" value="Год участия">Год<br>
+                            
+                       </form>
+                  </td>
+                  <td>
+                      <form>
+                          <p align="center">
+                          <strong>Результат</strong>
+                          </p>
+                          <input type="checkbox" id="points" value="1">Год участия<br>
+                          <input type="checkbox" id="participation_count" value="2">Количество очков<br>
+                          <input type="checkbox" id="event" value="3">Количество участий<br>
+                          
+                      </form>
+                  </td>
+              </tr>
+              
+              
+          </table>
+          <input type="button" id="makegraph" value="Построить">
+          <input type="button" id="clear" value="Очистить">
+          <svg id="chart" width="2000" height="1000"></svg>
+         
+          
+          <br>Здесь будет график<br>
+           </details>
+        <details>
+            <summary>Фильтр</summary>
+            <form>
+              <p>Страна:
+                <input type="text" id="country"/>
+              </p>
+              <p>Столица:
+                <input type="text" id="city"/>
+              </p>
+              <p>Очки:
+                <input type="number" id="pointB"/>до
+                <input type="number" id="pointA"/>
+              </p>
+              <p>Год:
+                <input type="number" id="before"/>до
+                <input type="number" id="after"/>
+              </p>
+            </form>
+            <input type="button" value="Найти" id="found" onClick="filterTable()"/>
+            <input type="button" value="отмена" onClick="returnTable()"/>
+          </details>
+          <details>
+            <summary>Сортировка</summary>Первый уровень:
+            <select id="1lv">
+              
+              <option value="0">место</option>
+              <option value="1">Сборная</option>
+              <option value="2">Столица</option>
+              <option value="3">Количество очков</option>
+              <option value="4">Год участия в олимпиаде</option>
+            </select>по убыванию?
+            <input type="checkbox" id="as"/><br/>Второй уровень:
+            <select id="2Lv">
+              
+                <option value="0">место</option>
+                <option value="1">Сборная</option>
+                <option value="2">Столица</option>
+                <option value="3">Количество очков</option>
+                <option value="4">Год участия в олимпиаде</option>
+            </select>по убыванию?
+            <input type="checkbox" id="ag"/><br/>Третий уровень:
+            <select id="3Lv">
+              
+                <option value="0">место</option>
+                <option value="1">Сборная</option>
+                <option value="2">Столица</option>
+                <option value="3">Количество очков</option>
+                <option value="4">Год участия в олимпиаде</option>
+            </select>по убыванию?
+            <input type="checkbox" id="a"/>
+            <input type="button" value="сортировать" onClick="sortTable()"/>
+            <input type="button" value="отмена" onClick="returnTable()"/>
+            <p id = "letSort"></p>
+            
+          </details>
+          <h1>Данные</h1>
+          <table border="1" id="table">
+            </table>
+            <script src="C:\Users\Daret\Desktop\html\2 семестр\график\data.js"></script>
+	<script src="C:\Users\Daret\Desktop\html\2 семестр\график\main.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="graph.js"></script>
+      </body>
+      </html>
+            
